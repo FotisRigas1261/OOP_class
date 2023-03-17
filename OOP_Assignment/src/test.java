@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ class test {
 	void test2() {
 		int[] elems= {12,24,45};
 		assertEquals(false,MyMath.IsSorted(elems));
+		//assertThrows(IllegalArgumentException.class ()-> MyMath.IsSorted(null));
 	}
 	
 	
