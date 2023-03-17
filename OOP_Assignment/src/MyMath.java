@@ -13,9 +13,12 @@ public class MyMath {
  *       | x<(result+1)*(result+1)
  */
 	static int sqrt(int x) {
+		if (x<0) 
+			throw new IllegalArgumentException("x is negative!"); //Defensive programming	
 		int r=0;
 		while((r+1)*(r+1) <=x)
 			r++;
 		return x;
 	}
+	
 }
