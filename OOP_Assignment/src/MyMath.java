@@ -36,5 +36,24 @@ public class MyMath {
 		return true;
 	}
 	
-	
+/**
+ * @pre  | elements!=null
+ * @post | Intstream.range(1, elements.length).allMatch(i -> elements[i] == -old(elements.clone())[i])
+ */	
+	static void negateElement(int[] elements) {
+		for(int i=0; i<elements.length; i++)
+			elements[i]=-elements[i];
+	}
+
+/**
+ * Insert value v into 0 and n into an array
+ * @pre  |
+ * @post |
+ */
+	static void insert(int[] elements, int n, int v) {
+		
+	}
+
 }
+
+
