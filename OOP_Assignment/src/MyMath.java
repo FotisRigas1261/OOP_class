@@ -46,14 +46,29 @@ public class MyMath {
 	}
 
 /**
- * Insert value v into 0 and n into an array
- * @pre  |
- * @post |
+ * Insert value v into an array between 0 and n 
+ * @pre  | array!=null
+ * @pre  | 0 <=n
+ * @post The elements between 0 and n must be sorted
+ * 		 | IntStream.range(1,n).allMatch(i->array[i-1] <= array[i])
+ * 
+ * @post  The elements between index 0 and n are in ascending order
+ * 		 |IntStream.range(1,n+1).allMatch(1->array[i-1]<=array[i])
+ * @post The elements between index 0 and n are preserved, v is inserted
+ *       | IntStream.range(0,n+1).filter(j->old(array.clone())[j]==array[i]).count()+
+ *        (array[i]==v? 1:0))
+ *        
+ * C? A:B means if C then A otherwise B
  */
-	static void insert(int[] elements, int n, int v) {
-		
+	static void insert(int[] array, int n, int v) {
+		int i=0;
+		while (i<n && array[i] < v) {
+			i++;
+		for (int j=n-1; i<=j; j++)
+			array[j+1]=array[j];
+		array[i]=v;
+		}
 	}
-
 }
 
 
