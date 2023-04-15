@@ -1,3 +1,4 @@
+package class_methods;
 public class MyMath {
 	//All of these are PROCEDURAL ABSTRACTIONS
 /**
